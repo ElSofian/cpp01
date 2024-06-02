@@ -10,10 +10,6 @@ int main(int ac, char **av)
 		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 		return 0;
 	}
-	// harl.complain("DEBUG");
-	// harl.complain("INFO");
 	harl.complain(av[1]);
-	// harl.complain("ERROR");
-	// harl.complain("invalid");
     return 0;
 }
