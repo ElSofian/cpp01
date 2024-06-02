@@ -1,15 +1,10 @@
 # **************************************************************************** #
 # VARIABLES
 
-NAME		= zombie
+NAME		= replace
 CC			= c++
-FLAGS		= -Wall -Wextra -I. -std=c++98
+FLAGS		= -Wall -Wextra -Iinc -std=c++98
 RM			= rm -rf
-
-OBJS_DIR	= bin
- 
-SRCS		= newZombie.cpp randomChump.cpp Zombie.cpp main.cpp
-OBJS		= $(patsubst %.cpp, $(OBJS_DIR)/%.o, $(SRCS))
 
 # **************************************************************************** #
 # COLORS
@@ -27,22 +22,21 @@ END_COLOR	= \033[0;39m
 # **************************************************************************** #
 # RULES
 
-all: $(NAME)
+all: $(NAME) utils
 
-$(NAME): $(OBJS)
-	@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
-	@echo "$(GREEN)[Success]$(END_COLOR) Zombie is ready !"
+$(NAME):
+	@$(CC) $(FLAGS) main.cpp -o $(NAME)
+	@echo "$(GREEN)[Success]$(END_COLOR) Replace is ready !"
 
-$(OBJS_DIR)/%.o: %.cpp
-	@mkdir -p $(@D)
-	@$(CC) $(FLAGS) -c $< -o $@
+utils:
+	@echo "bonjour\nje\nsuis\nsofian" > test
 
 clean:
-	@$(RM) $(OBJS_DIR)
+	@$(RM) test.replace
 	@echo "$(GREY)[Clean]$(END_COLOR) Objects have been deleted"
 
 fclean:
-	@$(RM) $(OBJS_DIR) $(NAME) a.out
+	@$(RM) $(NAME) a.out test test.replace
 	@echo "$(GREY)[Clean]$(END_COLOR) $(NAME) and objects have been deleted"
 
 re: fclean all

@@ -1,14 +1,14 @@
 # **************************************************************************** #
 # VARIABLES
 
-NAME		= zombie
+NAME		= harl
 CC			= c++
 FLAGS		= -Wall -Wextra -I. -std=c++98
 RM			= rm -rf
 
 OBJS_DIR	= bin
  
-SRCS		= newZombie.cpp randomChump.cpp Zombie.cpp main.cpp
+SRCS		= Harl.cpp main.cpp
 OBJS		= $(patsubst %.cpp, $(OBJS_DIR)/%.o, $(SRCS))
 
 # **************************************************************************** #
@@ -16,11 +16,11 @@ OBJS		= $(patsubst %.cpp, $(OBJS_DIR)/%.o, $(SRCS))
 
 GREEN		= \033[0;32m
 GREY		= \033[1;30m
-PURPLE		= \033[0;35m
+PURPLE	= \033[0;35m
 BLUE		= \033[0;94m
 CYAN		= \033[0;36m
 PINK		= \033[1;35m
-RED			= \033[0;31m
+RED		= \033[0;31m
 END_COLOR	= \033[0;39m
 
 
@@ -31,7 +31,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
-	@echo "$(GREEN)[Success]$(END_COLOR) Zombie is ready !"
+	@echo "$(GREEN)[Success]$(END_COLOR) Harl is ready !"
 
 $(OBJS_DIR)/%.o: %.cpp
 	@mkdir -p $(@D)

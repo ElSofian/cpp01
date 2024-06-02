@@ -2,13 +2,13 @@
 # VARIABLES
 
 NAME		= zombie
-CC			= c++
+CC		= c++
 FLAGS		= -Wall -Wextra -I. -std=c++98
-RM			= rm -rf
+RM		= rm -rf
 
 OBJS_DIR	= bin
  
-SRCS		= newZombie.cpp randomChump.cpp Zombie.cpp main.cpp
+SRCS		= zombieHorde.cpp Zombie.cpp main.cpp
 OBJS		= $(patsubst %.cpp, $(OBJS_DIR)/%.o, $(SRCS))
 
 # **************************************************************************** #
@@ -16,11 +16,11 @@ OBJS		= $(patsubst %.cpp, $(OBJS_DIR)/%.o, $(SRCS))
 
 GREEN		= \033[0;32m
 GREY		= \033[1;30m
-PURPLE		= \033[0;35m
+PURPLE	= \033[0;35m
 BLUE		= \033[0;94m
 CYAN		= \033[0;36m
 PINK		= \033[1;35m
-RED			= \033[0;31m
+RED		= \033[0;31m
 END_COLOR	= \033[0;39m
 
 

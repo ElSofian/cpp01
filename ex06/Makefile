@@ -1,14 +1,14 @@
 # **************************************************************************** #
 # VARIABLES
 
-NAME		= zombie
+NAME		= HarlFilter
 CC			= c++
 FLAGS		= -Wall -Wextra -I. -std=c++98
 RM			= rm -rf
 
 OBJS_DIR	= bin
  
-SRCS		= newZombie.cpp randomChump.cpp Zombie.cpp main.cpp
+SRCS		= Harl.cpp main.cpp
 OBJS		= $(patsubst %.cpp, $(OBJS_DIR)/%.o, $(SRCS))
 
 # **************************************************************************** #
@@ -31,7 +31,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
-	@echo "$(GREEN)[Success]$(END_COLOR) Zombie is ready !"
+	@echo "$(GREEN)[Success]$(END_COLOR) HarlFilter is ready !"
 
 $(OBJS_DIR)/%.o: %.cpp
 	@mkdir -p $(@D)
