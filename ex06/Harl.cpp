@@ -34,15 +34,10 @@ void Harl::complain(std::string level) {
 		if (type[i] == level)
 			fnindex = i;
 	
-	if (fnindex != -1)
+	for (int i = fnindex; i < 4; i++)
 	{
-		for (int i = fnindex; i < 4; i++)
-		{
-			std::cout << "[ " << type[i] << " ] " << std::endl;
-			(this->*fnptr[i])();
-			std::cout << std::endl;
-		}
+		std::cout << "[ " << type[i] << " ] " << std::endl;
+		(this->*fnptr[i])();
+		std::cout << std::endl;
 	}
-	else
-		std::cout << "Invalid level of complaint." << std::endl;
 }
