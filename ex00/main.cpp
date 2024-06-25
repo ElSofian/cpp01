@@ -1,17 +1,17 @@
 #include "Zombie.hpp"
 
-void    secured_delete(Zombie *victim)
+void    secured_delete(Zombie *zombie)
 {
-	if (victim != NULL)
-		delete victim;
+	if (zombie != NULL)
+		delete zombie;
 }
 
 int main(void)
 {
     Zombie soso = Zombie("Soso");
     soso.announce();
-    Zombie *yamcha = newZombie("Djib");
-    secured_delete(yamcha);
+    Zombie *djib = newZombie("Djib");
+    secured_delete(djib);
     randomChump("troisieme");
     return (0);
 }
