@@ -6,9 +6,15 @@ int main(void)
 	std::string *stringPTR = &str;	
 	std::string &stringREF = str;
 
-	std::cout << "Address of the string in memory: " << &str << std::endl;
-	std::cout << "Address of the string stocked in stringPTR: " << &stringPTR << std::endl;
-	std::cout << "Address of the string stocked stringREF: " << &stringREF << std::endl;
+	std::cout << "Addresses : \n";
+    std::cout << &str << std::endl;
+    std::cout << &stringPTR << std::endl;
+    std::cout << &stringREF << std::endl;
+
+    std::cout << "\nValues : \n";
+    std::cout << str << std::endl;
+    std::cout << stringPTR << std::endl;
+    std::cout << stringREF << std::endl;
 
     return (0);
 }

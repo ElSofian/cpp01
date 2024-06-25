@@ -1,7 +1,7 @@
 # **************************************************************************** #
 # VARIABLES
 
-NAME        = zombie
+NAME        = addresses
 CC          = c++
 CFLAGS      = -Wall -Wextra -Werror -std=c++98
 
@@ -25,7 +25,7 @@ all: $(NAME)
 
 $(NAME):
 	@$(CC) $(CFLAGS) main.cpp -o $(NAME)
-	@echo "$(GREEN)[Success]$(END_COLOR) Zombie is ready !"
+	@echo "$(GREEN)[Success]$(END_COLOR) Addresses is ready !"
 
 clean:
 	@echo "$(GREY)[Clean]$(END_COLOR) No objects to delete. If you want to delete the executable, do $(BLUE)make fclean$(END_COLOR)"
