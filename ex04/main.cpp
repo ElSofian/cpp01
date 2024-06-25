@@ -1,4 +1,4 @@
-#include "replace.hpp"
+#include "Replace.hpp"
 
 void replaceAll(std::string& content, const std::string& s1, const std::string& s2) {
     size_t pos = 0;

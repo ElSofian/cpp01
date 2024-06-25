@@ -5,6 +5,4 @@
 #include <fstream>
 #include <string>
 
-
-
 #endif
